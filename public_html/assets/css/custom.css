@@ -1,0 +1,44 @@
+.navContainer {
+    display: flex;
+    justify-content: end !important;
+    flex-direction: row-reverse;
+}
+
+.navbar-collapse {
+    flex-grow: unset;
+}
+
+.rtlText {
+    text-align: right;
+    direction: rtl;
+}
+
+.headerTitleFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerTitleFlex > span{
+    padding-right: 40px;
+    padding-top: 3px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand{
+        top: -20px !important;
+    }
+
+    .padding-none {
+        border-bottom: 1px solid #ddd;
+        border-left: none;
+    }
+}
+
+.page-scrool{
+    text-align: right !important;
+}
+
+.fullHeight {
+    height: 100% !important;
+}
