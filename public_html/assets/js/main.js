@@ -44,7 +44,7 @@
           : "";
     };
 
-     jQuery('#clock').countdown('2019/11/03',function(event){
+     jQuery('#clock').countdown('2019/11/12',function(event){
       var $this=jQuery(this).html(event.strftime(''
       +'<div class="time-entry days"><span>' + toFa(event.offset.totalDays) + '</span><strong>روز</strong></div> '
       +'<div class="time-entry hours"><span>' + toFa(event.offset.hours) + '</span><strong>ساعت</strong></div> '
