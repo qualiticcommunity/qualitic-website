@@ -44,12 +44,12 @@
           : "";
     };
 
-     jQuery('#clock').countdown('2019/11/12',function(event){
+     jQuery('#clock').countdown('2019/11/12 17:00',function(event){
       var $this=jQuery(this).html(event.strftime(''
-      +'<div class="time-entry days"><span>' + toFa(event.offset.totalDays) + '</span><strong>روز</strong></div> '
+      +'<div class="time-entry seconds"><span>' + toFa(event.offset.seconds) + '</span><strong>ثانیه</strong></div> '
+	  +'<div class="time-entry minutes"><span>' + toFa(event.offset.minutes) + '</span><strong>دقیقه</strong></div>'
       +'<div class="time-entry hours"><span>' + toFa(event.offset.hours) + '</span><strong>ساعت</strong></div> '
-      +'<div class="time-entry minutes"><span>' + toFa(event.offset.minutes) + '</span><strong>دقیقه</strong></div>'
-      +'<div class="time-entry seconds"><span>' + toFa(event.offset.seconds) + '</span><strong>ثانیه</strong></div> '));
+      +'<div class="time-entry days"><span>' + toFa(event.offset.totalDays) + '</span><strong>روز</strong></div> '));
     });
 
     /* slicknav mobile menu active  */
