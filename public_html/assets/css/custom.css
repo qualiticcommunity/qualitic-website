@@ -13,6 +13,10 @@
     direction: rtl;
 }
 
+.justify {
+  text-align: justify;
+}
+
 .headerTitleFlex{
     display: flex;
     align-items: center;

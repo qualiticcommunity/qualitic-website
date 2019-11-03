@@ -1324,7 +1324,6 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   position: absolute;
   top: 0;
-  background: rgba(47, 47, 47, 0.7);
   opacity: 0;
   width: 100%;
   transition: all 0.3s ease-in-out 0s;
@@ -1415,10 +1414,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 .team-item .info-text p {
   margin: 0;
   color: #888;
-}
-
-.team-item:hover .team-overlay {
-  opacity: 1;
 }
 
 .team-item:hover .social-icons {
