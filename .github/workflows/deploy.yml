@@ -1,0 +1,14 @@
+---
+name: "Deploy Website"
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    container:
+      image: ustcmirror/lftpsync:alpine-3.6
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - run: ./deploy.sh "${{ secrets.FTP_HOST }}" "${{ secrets.FTP_USER }}" "${{ secrets.FTP_PASSWORD }}"
