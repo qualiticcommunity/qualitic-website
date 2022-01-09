@@ -19,4 +19,4 @@ fi
 
 set -e
 
-lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASS $URL; mirror -Rev public_html/ .  --ignore-time --parallel=10"
+lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASS $URL; mirror -Rev public_html/ ./public_html  --ignore-time --parallel=10"
