@@ -5,10 +5,15 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    container:
-      image: ustcmirror/lftpsync:alpine-3.6
     steps:
       - uses: actions/checkout@v2
         with:
           lfs: true
-      - run: ./deploy.sh "${{ secrets.FTP_HOST }}" "${{ secrets.FTP_USER }}" "${{ secrets.FTP_PASSWORD }}"
+      - run: >
+          docker run
+          --entrypoint ""
+          -v `pwd`:/workdir/
+          --workdir /workdir/
+          ustcmirror/lftpsync:alpine-3.6 sh -c '
+            ./deploy.sh "${{ secrets.FTP_HOST }}" "${{ secrets.FTP_USER }}" "${{ secrets.FTP_PASSWORD }}"
+          '
