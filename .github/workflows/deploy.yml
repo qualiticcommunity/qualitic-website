@@ -1,7 +1,9 @@
 ---
 name: "Deploy Website"
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-20.04
